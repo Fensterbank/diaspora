@@ -1,4 +1,7 @@
-.media { margin: 10px; }
+.media {
+  margin: 10px;
+  position: relative;
+}
 
 .media,
 .bd {
@@ -15,3 +18,8 @@
 .media .img img { display: block }
 .media .imgEt { float: right; margin-left: 10px; }
 
+.media .gallery-picture img { margin-bottom: 20px; }
+
+.media .card_footer .footer_container {  font-size: 13px; }
+
+.media .card_footer span { float: right; }

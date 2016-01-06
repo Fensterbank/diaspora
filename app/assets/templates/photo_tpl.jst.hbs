@@ -26,4 +26,17 @@
       </a>
     </div>
   </div>
+  <div class="card_footer">
+    <div class="footer_container">
+      <a href="/posts/{{status_message.id}}">
+        <time class="timeago" data-original-title="{{{localTime created_at}}}" datetime="{{created_at}}" />
+      </a>
+
+      <span>
+        <i class="entypo-heart"></i> {{status_message.likes_count}}
+        <i class="entypo-comment"></i> {{status_message.comments_count}}
+        <i class="entypo-reshare"></i> {{status_message.reshares_count}}
+      </span>
+    </div>
+  </div>
 </div>

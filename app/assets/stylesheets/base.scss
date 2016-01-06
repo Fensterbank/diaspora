@@ -74,3 +74,30 @@ pre { word-wrap: break-word; }
 .badge-important {
   background-color: $red;
 }
+
+// grey card footer
+.card_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $background-grey;
+  margin-left: 0 !important;
+
+  width: 100%;
+  min-height: 19px;
+
+  font-size: 10px;
+  line-height: 18px;
+
+  border-top: 1px solid #cccccc;
+
+  .footer_container {
+    padding: 1px 5px;
+
+    a {
+      color: $text-grey;
+      margin-right: 4px;
+      font-weight: normal;
+    }
+  }
+}

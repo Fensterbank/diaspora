@@ -23,6 +23,13 @@ class Photo < ActiveRecord::Base
       { :height => photo.height,
         :width => photo.width }
     }, :as => :dimensions
+    t.add lambda { |photo|
+      { :id => photo.status_message.id,
+        :likes_count => photo.status_message.likes_count,
+        :comments_count => photo.status_message.comments_count,
+        :reshares_count => photo.status_message.reshares_count
+      }
+    }, :as => :status_message
   end
 
   mount_uploader :processed_image, ProcessedImage
