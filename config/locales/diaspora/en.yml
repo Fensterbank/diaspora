@@ -182,9 +182,6 @@ en:
       video_title:
         unknown: "Unknown video title"
   aspects:
-    zero: "No aspects"
-    one: "1 aspect"
-    other: "%{count} aspects"
     contacts_visible: "Contacts in this aspect will be able to see each other."
     contacts_not_visible: "Contacts in this aspect will not be able to see each other."
     edit:
@@ -309,9 +306,6 @@ en:
     other: "%{count} reactions"
 
   contacts:
-    zero: "No contacts"
-    one: "1 contact"
-    other: "%{count} contacts"
     create:
       failure: "Failed to create contact"
     sharing:
@@ -917,7 +911,6 @@ en:
       start_sharing: "Start sharing"
       message: "Message"
       mention: "Mention"
-      ignoring: "You are ignoring all posts from %{name}."
       closed_account: "This account has been closed."
     sub_header:
       you_have_no_tags: "You have no tags!"

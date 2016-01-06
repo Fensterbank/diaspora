@@ -85,6 +85,7 @@ With the port to Bootstrap 3, app/views/terms/default.haml has a new structure. 
 * Redesign and refactor report admin interface [#6378](https://github.com/diaspora/diaspora/pull/6378)
 * Add permalink icon to stream elements [#6457](https://github.com/diaspora/diaspora/pull/6457)
 * Move reshare count to interactions for stream elements [#6487](https://github.com/diaspora/diaspora/pull/6487)
+* Posts of ignored users are now visible on that profile page [#6617](https://github.com/diaspora/diaspora/pull/6617)
 
 # 0.5.6.0
 
@@ -98,6 +99,9 @@ With the port to Bootstrap 3, app/views/terms/default.haml has a new structure. 
 * Do not try to display hovercards when logged out [#6587](https://github.com/diaspora/diaspora/pull/6587)
 
 ## Features
+
+* Display hovercards without aspect dropdown when logged out [#6603](https://github.com/diaspora/diaspora/pull/6603)
+* Add media.ccc.de as a trusted oEmbed endpoint
 
 # 0.5.5.1
 
