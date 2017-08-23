@@ -105,7 +105,10 @@ class PhotosController < ApplicationController
     # For XHR file uploads, request.params[:qqfile] will be the path to the temporary file
     # For regular form uploads (such as those made by Opera), request.params[:qqfile] will be an UploadedFile which can be returned unaltered.
     if not request.params[:qqfile].is_a?(String)
-      params[:qqfile]
+      qqfile = params[:qqfile]
+      # Cropped or manipulated files have their real filename only in qqfilename. Take care of this.
+      qqfile.original_filename = params[:qqfilename] if (qqfile.original_filename == "blob")
+      qqfile
     else
       ######################## dealing with local files #############
       # get file name
