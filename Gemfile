@@ -87,6 +87,7 @@ gem "entypo-rails", "3.0.0"
 
 # JavaScript
 
+gem "sprockets-es6",     "0.9.2"
 gem "handlebars_assets", "0.23.2"
 gem "jquery-rails",      "4.3.1"
 gem "js-routes",         "1.3.3"
