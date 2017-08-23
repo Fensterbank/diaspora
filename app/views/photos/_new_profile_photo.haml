@@ -3,7 +3,8 @@
 -#   the COPYRIGHT file.
 
 .profile-photo-upload#profile_photo_upload
-  = owner_image_tag(:thumb_large)
+  .crop-container
+    = owner_image_tag(:thumb_large)
   .small-horizontal-spacer
   .clearfix
     .text-center

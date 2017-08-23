@@ -8,6 +8,10 @@ Diaspora.ProfilePhotoUploader.prototype = {
   constructor: Diaspora.ProfilePhotoUploader,
 
   initialize: function() {
+    var that = this;
+
+    var fileInput = $("#file-upload");
+    var avatar = $("#profile_photo_upload").find(".avatar");
     new qq.FineUploaderBasic({
       element: document.getElementById("file-upload"),
       validation: {
@@ -15,7 +19,7 @@ Diaspora.ProfilePhotoUploader.prototype = {
         sizeLimit: 4194304
       },
       request: {
-        endpoint: Routes.photos(),
+        endpoint: 'xxx',//Routes.photos(),
         params: {
           /* eslint-disable camelcase */
           authenticity_token: $("meta[name='csrf-token']").attr("content"),
@@ -24,6 +28,7 @@ Diaspora.ProfilePhotoUploader.prototype = {
         }
       },
       button: document.getElementById("file-upload"),
+      autoUpload: false,
 
       messages: {
         typeError: Diaspora.I18n.t("photo_uploader.invalid_ext"),
@@ -33,16 +38,32 @@ Diaspora.ProfilePhotoUploader.prototype = {
 
       callbacks: {
         onProgress: function(id, fileName, loaded, total) {
+          console.log('onProgress');
           var progress = Math.round(loaded / total * 100);
           $("#fileInfo").text(fileName + " " + progress + "%");
         },
-        onSubmit: function() {
+        onSubmit: function(id, name) {
+          console.log('onSubmit', id, name);
           $("#file-upload").addClass("loading");
-          $("#profile_photo_upload").find(".avatar").addClass("loading");
-          $("#file-upload-spinner").removeClass("hidden");
-          $("#fileInfo").show();
+          //$("#profile_photo_upload").find(".avatar").addClass("loading");
+          //$("#file-upload-spinner").removeClass("hidden");
+          //$("#fileInfo").show();
+
+          var file = fileInput.find('input')[0].files[0];
+          console.log(file);
+          // FileReader support
+          if (FileReader && file) {
+            var fr = new FileReader();
+            fr.onload = function () {
+              console.log('onload');
+              avatar.attr("src", fr.result);
+              that.initializeCropper(avatar[0]);
+            };
+            fr.readAsDataURL(file);
+          }
         },
         onComplete: function(id, fileName, responseJSON) {
+          console.log('onComplete');
           $("#file-upload-spinner").addClass("hidden");
           $("#fileInfo").text(Diaspora.I18n.t("photo_uploader.completed", {"file": fileName}));
           $("#file-upload").removeClass("loading");
@@ -82,6 +103,22 @@ Diaspora.ProfilePhotoUploader.prototype = {
 
       text: {
         fileInputTitle: ""
+      }
+    });
+  },
+  initializeCropper: function (imgElement) {
+    console.log('initializeCropper');
+    var cropper = new Cropper(imgElement, {
+      aspectRatio: 1,
+      zoomable: false,
+      crop: function(e) {
+        console.log(e.detail.x);
+        console.log(e.detail.y);
+        console.log(e.detail.width);
+        console.log(e.detail.height);
+        console.log(e.detail.rotate);
+        console.log(e.detail.scaleX);
+        console.log(e.detail.scaleY);
       }
     });
   }
