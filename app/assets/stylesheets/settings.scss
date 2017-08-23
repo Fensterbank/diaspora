@@ -25,9 +25,16 @@
   .avatar {
     height: auto;
     margin-bottom: 20px;
-    /*max-width: 200px;*/
+    max-width: 200px;
     width: auto;
-    max-width: 100%;
+  }
+
+  .crop-container {
+    .controls {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

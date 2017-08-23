@@ -16,7 +16,7 @@
 //= require bootstrap
 //= require diaspora
 //= require helpers/i18n
-//= require helpers/profile_photo_uploader
+//= require helpers/profile_photo_uploader.js
 //= require helpers/tags_autocomplete
 //= require bootstrap-markdown/bootstrap-markdown
 //= require helpers/markdown_editor
