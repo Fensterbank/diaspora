@@ -9,10 +9,14 @@
 # 0.7.1.0
 
 ## Refactor
+* Remove title from profile photo upload button [#7551](https://github.com/diaspora/diaspora/pull/7551)
+* Remove Internet Explorer workarounds [#7557](https://github.com/diaspora/diaspora/pull/7557)
 
 ## Bug fixes
+* Fix displaying posts with long labels [#7579](https://github.com/diaspora/diaspora/pull/7579)
 
 ## Features
+* Ask for confirmation when leaving a submittable comment field [#7530](https://github.com/diaspora/diaspora/pull/7530)
 
 # 0.7.0.0
 
