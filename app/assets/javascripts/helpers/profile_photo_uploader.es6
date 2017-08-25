@@ -64,6 +64,10 @@ Diaspora.ProfilePhotoUploader = class {
         onSubmit: (id, name) => this.onPictureSelected(id, name),
         onComplete: (id, fileName, responseJSON) => this.onUploadCompleted(id, fileName, responseJSON),
         onError: (id, name, errorReason) => this.showMessage("error", errorReason)
+      },
+
+      text: {
+        fileInputTitle: ""
       }
     });
   }
