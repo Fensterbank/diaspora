@@ -13,6 +13,7 @@
     padding-right: 10px;
   }
 }
+
 // scss-lint:enable SelectorFormat
 
 .enclosed-checkbox label {
@@ -28,9 +29,44 @@
     max-width: 200px;
     width: auto;
   }
+
+  .crop-container {
+    .controls {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .previews {
+    display: flex;
+
+    .preview-lg {
+      height: 70px;
+      width: 70px;
+    }
+
+    .preview-md {
+      height: 50px;
+      width: 50px;
+    }
+
+    .preview-sm {
+      height: 30px;
+      width: 30px;
+    }
+
+    > div {
+      margin-right: 10px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
 }
 
-.settings-visibility { margin-left: 10px; }
+.settings-visibility {
+  margin-left: 10px;
+}
 
 .page-profiles.action-edit textarea {
   max-width: 100%;

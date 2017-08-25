@@ -87,6 +87,7 @@ gem "entypo-rails", "3.0.0"
 
 # JavaScript
 
+gem "sprockets-es6",     "0.9.2"
 gem "handlebars_assets", "0.23.2"
 gem "jquery-rails",      "4.3.1"
 gem "js-routes",         "1.3.3"
@@ -109,6 +110,7 @@ source "https://rails-assets.org" do
   gem "rails-assets-bootstrap-markdown",                  "2.10.0"
   gem "rails-assets-corejs-typeahead",                    "1.1.1"
   gem "rails-assets-fine-uploader",                       "5.13.0"
+  gem 'rails-assets-cropperjs',                           "0.8.1"
 
   # jQuery plugins
 
@@ -185,7 +187,7 @@ gem "typhoeus",           "1.1.2"
 
 gem "gon",                     "6.1.0"
 gem "hamlit",                  "2.8.4"
-gem "mobile_fu",               "1.4.0", require: "mobile-fu"
+gem "mobile-fu",               "1.4.0"
 gem "rails-timeago",           "2.16.0"
 gem "will_paginate",           "3.1.6"
 
